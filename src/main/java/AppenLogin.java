@@ -2,14 +2,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class AppenLoggin {
-    public static void main(String[] args) throws InterruptedException {
+public class AppenLogin {
+    public static void main(String[] args) {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -24,6 +23,6 @@ public class AppenLoggin {
         String password = "8$05KPICk7&oifbr";
         passwordField.sendKeys(password);
         driver.findElement(By.id("submit_button")).click();
-        // driver.close();
+        driver.close();
     }
 }
